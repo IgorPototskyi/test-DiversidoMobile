@@ -1,0 +1,232 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	box-sizing: border-box
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: $color-grey
+	max-width: 1366px
+	margin: 0 auto
+
+	--sidebar-width: 314px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.topbar
+	display: flex
+	position: fixed
+	top: 0
+	width: 100%
+	max-width: 1366px
+	padding-left: var(--sidebar-width)
+	margin: 0 auto
+	height: 80px
+	background-color: $color-top-bg
+	color: $color-white
+
+	&__path
+		margin: auto 0 auto 40px
+
+	&__period
+		margin: auto 25px auto auto
+
+	&__report
+		margin-right: 30px
+
+	&__select
+		width: 143px
+		height: 30px
+		text-indent: 20px
+
+.sidebar
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	width: var(--sidebar-width)
+	background-color: $color-side-bg
+	color: $color-white
+	transition: width $time ease
+
+	&__title
+		position: relative
+		height: 80px
+		padding: 10px 0 0 30px
+		font-size: 37px
+
+	&__title-l
+		color: $color-red
+
+	&__btn
+		display: flex
+		position: absolute
+		top: 21px
+		right: -19px
+		width: 38px
+		height: 38px
+		background-color: $color-blue
+		border-radius: 50%
+		border: 2px solid transparent
+		outline: none
+		transform: rotate(0deg)
+		transition: all $time ease
+
+		&:hover
+			border: 1px solid $color-white
+
+		&.sidebar__btn--rotate
+			transform: rotate(180deg)
+
+	&__btn-img
+		margin: auto	
+
+	&__user
+		height: 142px
+		background: linear-gradient($color-top-bg, $color-user-bg)
+		display: flex
+
+	&__img
+		display: inline-block
+		width: 62px
+		height: 62px
+		border-radius: 50%
+		overflow: hidden
+		background-image: url('../img/user.jpg')
+		margin: auto 0 auto 30px
+
+	&__user-cont
+		display: inline-block
+		margin: auto 0 auto 25px
+		
+	&__name
+		font-size: 20px
+		color: $color-user-name
+		line-height: 24px
+
+	&__general
+		height: 75px
+		padding: 18px 0 0 30px
+		text-transform: uppercase
+		font-size: 20px
+
+	&__nav-list
+		list-style: none
+		padding: 0
+		margin: 0
+
+	&__nav-item
+		font-size: 18px
+		transition: all $time ease
+
+		&.opened
+			height: auto
+			background-color: $color-dash-bg
+			
+			.sidebar__nav-link
+				border-left: 8px solid $color-blue
+
+	&__nav-link
+		position: relative
+		display: inline-block
+		width: 100%
+		height: 70px
+		font-size: 18px
+		text-decoration: none
+		color: $color-white
+		border-left: 8px solid transparent
+		transition: all $time ease
+
+		&:hover
+			// border-left: 8px solid $color-blue
+			background-color: $color-dash-bg
+
+	&__nav-icon
+		position: absolute
+		top: 22px
+		left: 35px
+		font-size: 24px 
+
+	&__down
+		position: absolute
+		top: 30px
+		right: 45px
+		font-size: 12px	
+
+	&__nav-text
+		display: inline-block
+		margin: 18px 0 0 80px
+
+	&__count
+		position: absolute
+		right: 30px
+		top: 25px
+		width: 30px
+		height: 20px
+		border-radius: 9px
+		background-color: $color-pink
+		line-height: 20px
+		font-size: 12px
+		text-align: center
+
+	&__dashboard-list
+		display: none
+		list-style: none
+		margin: 0
+		padding: 10px 0
+
+	&__dashboard-link
+		display: inline-block
+		width: 100%
+		height: 40px
+		padding-left: 85px
+		text-decoration: none
+		color: $color-white
+		border-right: 8px solid transparent
+		transition: all $time ease
+
+		&:hover
+			border-right: 8px solid $color-blue
+
+		.fa
+			margin-right: 10px
+
+		&.sidebar__dashboard-link--col1
+			.fa
+				color: $color-pink
+
+		&.sidebar__dashboard-link--col2
+			.fa
+				color: $color-blue
+
+		&.sidebar__dashboard-link--col3
+			.fa
+				color: $color-dash3
+
+		&.sidebar__dashboard-link--col4
+			.fa
+				color: $color-dash4
+	
+.sidebar--small
+		
+
+.content
+	margin: 80px 0 0 var(--sidebar-width)
+
+
+		
+
+	
+
+@import "media" // Всегда в конце

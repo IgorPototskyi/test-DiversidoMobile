@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Test task</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+	<header class="topbar">
+		<div class="topbar__path">Dashboard / Home / All Site View</div>
+
+		<div class="topbar__period">
+			<span class="topbar__report">Reporting Period</span>
+			<select class="topbar__select">
+				<option value="30">Last 30 Day's</option>
+				<option value="15">Last 15 Day's</option>
+				<option value="7">Last 7 Day's</option>
+			</select>
+		</div>
+
+	</header>
+
+	<aside class="sidebar">
+		<div class="sidebar__title">
+			<span class="sidebar__title-l">C</span>ompany
+			<button class="sidebar__btn">
+				<img class="sidebar__btn-img" src="img/btn.png" alt="button">
+			</button>
+		</div>
+
+		<div class="sidebar__user">
+			 <div class="sidebar__img"></div> 
+			<div class="sidebar__user-cont">
+				<div class="sidebar__name">User Name</div> 
+				 <div class="sidebar__company">Company name</div> 
+			</div>
+		</div>
+
+		<div class="sidebar__general">General</div>
+
+		<nav class="sidebar__nav">
+			<ul class="sidebar__nav-list">
+				<li class="sidebar__nav-item">
+					<a href="#" class="sidebar__nav-link" id="dashboardId">
+						<i class="fa fa-tachometer sidebar__nav-icon"></i>
+						<span class="sidebar__nav-text">Dashboard</span>
+						<i class="fa fa-chevron-down sidebar__down"></i>
+					</a>
+
+					<ul class="sidebar__dashboard-list">
+						<li class="sidebar__dashboard-item">
+							<a href="#" class="sidebar__dashboard-link sidebar__dashboard-link--col1">
+								<i class="fa fa-circle-o"></i>Dashboard 1
+							</a>
+						</li>
+
+						<li class="sidebar__dashboard-item">
+							<a href="#" class="sidebar__dashboard-link sidebar__dashboard-link--col2">
+								<i class="fa fa-circle-o"></i>Dashboard 2
+							</a>
+						</li>
+
+						<li class="sidebar__dashboard-item">
+							<a href="#" class="sidebar__dashboard-link sidebar__dashboard-link--col3">
+								<i class="fa fa-circle-o"></i>Dashboard 3
+							</a>
+						</li>
+
+						<li class="sidebar__dashboard-item">
+							<a href="#" class="sidebar__dashboard-link sidebar__dashboard-link--col4">
+								<i class="fa fa-circle-o"></i>Coming soon
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="sidebar__nav-item">
+					<a href="#" class="sidebar__nav-link">
+						<i class="fa fa-desktop sidebar__nav-icon"></i>
+						<span class="sidebar__nav-text">Layouts</span>
+					</a>
+				</li>
+
+				<li class="sidebar__nav-item">
+					<a href="#" class="sidebar__nav-link">
+						<i class="fa fa-folder-open sidebar__nav-icon"></i>
+						<span class="sidebar__nav-text">Pages</span>
+					</a>
+				</li>
+
+				<li class="sidebar__nav-item">
+					<a href="#" class="sidebar__nav-link">
+						<i class="fa fa-comments sidebar__nav-icon"></i>
+						<span class="sidebar__nav-text">Message</span>
+						<div class="sidebar__count">09</div>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+	</aside>
+
+	<section class="content">
+		<div class="content__cont">
+
+			<div class="content__nav">
+				<div class="content__sort">recent order</div>
+				<div class="content__buttons"></div>
+			</div>
+
+			<table class="content__table">
+				<tr>
+					<th>Image</th>
+					<th>Product name</th> 
+					<th>Product code</th>
+					<th>Status</th>
+					<th>Purchased on</th> 
+					<th>Price</th>
+					<th>Quantity</th> 
+					<th>Tracking no#</th>
+				</tr>
+				<tr>
+					<td><img src="img/products/prod1.jpg" alt="prod1"></td>
+					<td>Your Product Title Here</td> 
+					<td>3BSD59</td>
+					<td>Paid</td>
+					<td>27 Sep 2015</td> 
+					<td>$99.00</td>
+					<td>2</td>
+					<td>#BG6R9853LP</td>
+				</tr>
+				<tr>
+					<td><img src="img/products/prod2.jpg" alt="prod2"></td>
+					<td>Your Product Title Here</td> 
+					<td>3BH87G</td>
+					<td>Pending</td>
+					<td>08 Sep 2015</td>
+					<td>$99.00</td>
+					<td>2</td>
+					<td>#368QRM83B</td>
+				</tr>
+			</table>
+
+		</div>
+	</section>
+	
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
