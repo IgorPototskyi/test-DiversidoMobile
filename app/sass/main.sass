@@ -60,37 +60,22 @@ body
 	color: $color-white
 	transition: width $time ease
 
+	&-mobile
+		display: none
+
 	&__title
 		position: relative
 		height: 80px
 		padding: 10px 0 0 30px
-		font-size: 37px
+		font-size: 0
+		overflow: hidden
 
 	&__title-l
 		color: $color-red
+		font-size: 37px
 
-	&__btn
-		display: flex
-		position: absolute
-		top: 21px
-		right: -19px
-		width: 38px
-		height: 38px
-		background-color: $color-blue
-		border-radius: 50%
-		border: 2px solid transparent
-		outline: none
-		transform: rotate(0deg)
-		transition: all $time ease
-
-		&:hover
-			border: 1px solid $color-white
-
-		&.sidebar__btn--rotate
-			transform: rotate(180deg)
-
-	&__btn-img
-		margin: auto	
+	&__title-r
+		font-size: 37px	
 
 	&__user
 		height: 142px
@@ -109,6 +94,7 @@ body
 	&__user-cont
 		display: inline-block
 		margin: auto 0 auto 25px
+		overflow: hidden
 		
 	&__name
 		font-size: 20px
@@ -149,7 +135,6 @@ body
 		transition: all $time ease
 
 		&:hover
-			// border-left: 8px solid $color-blue
 			background-color: $color-dash-bg
 
 	&__nav-icon
@@ -186,6 +171,9 @@ body
 		margin: 0
 		padding: 10px 0
 
+		&.visible
+			display: block
+
 	&__dashboard-link
 		display: inline-block
 		width: 100%
@@ -219,13 +207,195 @@ body
 				color: $color-dash4
 	
 .sidebar--small
-		
+	.sidebar
+		&__title
+			padding-left: 45px
+
+		&__title-r
+			display: none
+
+		&__general
+			display: none
+
+		&__nav-text
+			display: none
+
+		&__nav-item.opened
+			height: 70px
+
+		&__dashboard-list
+			display: none
+
+		&__down
+			display: none
+
+		&__nav-icon
+			left: 42px
+
+		&__count
+			top: 20px
+    		right: 25px
+
+.mobile-nav
+	display: none
+	position: absolute
+	top: 0
+	left: 0	
+	right: 0
+
+	.sidebar
+		position: relative
+		top: 0
+		width: 100%
+	
+		&__title
+			padding-top: 10px
+			text-align: center
+
+		&__user
+			justify-content: center
+
+		&__general
+			display: none
+
+		&__nav-list
+			text-align: center
+
+		&__nav-icon
+			position: static
+			margin-right: 10px
+
+		&__nav-text
+			margin-left: 0
+
+.btn
+	display: flex
+	position: absolute
+	top: -59px
+	left: calc(var(--sidebar-width) - 19px)
+	width: 38px
+	height: 38px
+	background-color: $color-blue
+	border-radius: 50%
+	border: 2px solid transparent
+	outline: none
+	transform: rotate(0deg)
+	transition: all $time ease
+
+	&:hover
+		border: 1px solid $color-white
+
+	&-img
+		margin: auto
+
+	&.btn--rotate
+		transform: rotate(180deg)
 
 .content
 	margin: 80px 0 0 var(--sidebar-width)
+	padding: 25px
 
+	&__nav
+		display: flex
+		height: 54px
+		background-color: $color-table-bg
+		border: 1px solid $color-border
+		padding: 0 20px
 
+	&__sort
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		margin: auto 0
+
+		.fa
+			margin-left: 3px
+
+	&__sort-link
+		text-decoration: none
+		color: $color-grey
+
+	&__buttons
+		margin: auto 0 auto auto
+
+	&__link
+		color: $color-grey
+
+		.fa
+			margin-left: 20px
+			font-size: 18px
+
+	&__table
+		width: 100%
+		border: 1px solid $color-border
+		border-top: none
+		font-size: 14px
+		padding: 15px
+
+		& tr th
+			text-transform: uppercase
+			padding: 10px 0
+			border-bottom: 1px solid $color-border
+
+		& tr td
+			text-align: center
+
+			& img
+				display: block
+				width: 45px
+				margin: 0 auto
+
+.burger
+	display: none
+	width: 40px
+	height: 40px
+	position: relative
+	margin: auto 20px
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer
+	border: 2px solid $color-white
+	outline: none
+	background-color: $color-white
+
+	&__item
+		display: block
+		position: absolute
+		height: 4px
+		width: 80%
+		margin: 0 10%
+		background: $color-top-bg
+		opacity: 1
+		left: 0
+		transform: rotate(0deg)
+		transition: $time ease-in-out
+
+		&:nth-child(1)
+			top: 5px
 		
+		&:nth-child(2)
+			top: 50%
+			transform: translateY(-50%)
+
+		&:nth-child(3)
+			bottom: 5px
+
+	&.opened
+		.burger__item:nth-child(1) 
+			top: 15px
+			transform: rotate(135deg)
+
+		.burger__item:nth-child(2) 
+			opacity: 0
+			left: -40px
+
+		.burger__item:nth-child(3)
+			bottom: 17px
+			transform: rotate(-135deg)
+
+	&:hover
+		background-color: rgba($color-white, .6)
+	
 
 	
 

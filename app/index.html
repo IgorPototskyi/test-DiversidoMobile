@@ -15,6 +15,12 @@
 
 <body>
 	<header class="topbar">
+		<button class="burger" id="burger">
+			<span class="burger__item"></span>
+			<span class="burger__item"></span>
+			<span class="burger__item"></span>
+		</button>
+
 		<div class="topbar__path">Dashboard / Home / All Site View</div>
 
 		<div class="topbar__period">
@@ -26,14 +32,18 @@
 			</select>
 		</div>
 
+		<!-- <div class="topbar__burger-cont"> -->
+			
+		<!-- </div> -->
+
 	</header>
+
+	<div class="mobile-nav"></div>
 
 	<aside class="sidebar">
 		<div class="sidebar__title">
-			<span class="sidebar__title-l">C</span>ompany
-			<button class="sidebar__btn">
-				<img class="sidebar__btn-img" src="img/btn.png" alt="button">
-			</button>
+			<span class="sidebar__title-l">C</span>
+			<span class="sidebar__title-r">ompany</span>
 		</div>
 
 		<div class="sidebar__user">
@@ -49,7 +59,7 @@
 		<nav class="sidebar__nav">
 			<ul class="sidebar__nav-list">
 				<li class="sidebar__nav-item">
-					<a href="#" class="sidebar__nav-link" id="dashboardId">
+					<a href="#" class="sidebar__nav-link sidebar__nav-link--dashboard" id="dashboardId">
 						<i class="fa fa-tachometer sidebar__nav-icon"></i>
 						<span class="sidebar__nav-text">Dashboard</span>
 						<i class="fa fa-chevron-down sidebar__down"></i>
@@ -108,45 +118,62 @@
 
 	</aside>
 
+	<button class="btn">
+		<img class="btn-img" src="img/btn.png" alt="button">
+	</button>
+
 	<section class="content">
 		<div class="content__cont">
 
 			<div class="content__nav">
-				<div class="content__sort">recent order</div>
-				<div class="content__buttons"></div>
+				<div class="content__sort">
+					<a href="#" class="content__sort-link">recent order</a>
+					<i class="fa fa-caret-down"></i>
+				</div>
+				
+				<div class="content__buttons">
+					<a href="#" class="content__link"><i class="fa fa-refresh"></i></a>
+					<a href="#" class="content__link"><i class="fa fa-chevron-down"></i></a>
+					<a href="#" class="content__link"><i class="fa fa-times"></i></a>
+				</div>
 			</div>
 
 			<table class="content__table">
-				<tr>
-					<th>Image</th>
-					<th>Product name</th> 
-					<th>Product code</th>
-					<th>Status</th>
-					<th>Purchased on</th> 
-					<th>Price</th>
-					<th>Quantity</th> 
-					<th>Tracking no#</th>
-				</tr>
-				<tr>
-					<td><img src="img/products/prod1.jpg" alt="prod1"></td>
-					<td>Your Product Title Here</td> 
-					<td>3BSD59</td>
-					<td>Paid</td>
-					<td>27 Sep 2015</td> 
-					<td>$99.00</td>
-					<td>2</td>
-					<td>#BG6R9853LP</td>
-				</tr>
-				<tr>
-					<td><img src="img/products/prod2.jpg" alt="prod2"></td>
-					<td>Your Product Title Here</td> 
-					<td>3BH87G</td>
-					<td>Pending</td>
-					<td>08 Sep 2015</td>
-					<td>$99.00</td>
-					<td>2</td>
-					<td>#368QRM83B</td>
-				</tr>
+				<thead>
+					<tr>
+						<th>Image</th>
+						<th>Product name</th> 
+						<th>Product code</th>
+						<th>Status</th>
+						<th>Purchased on</th> 
+						<th>Price</th>
+						<th>Quantity</th> 
+						<th>Tracking no#</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td><img src="img/products/prod1.jpg" alt="prod1"></td>
+						<td>Your Product Title Here</td> 
+						<td>3BSD59</td>
+						<td>Paid</td>
+						<td>27 Sep 2015</td> 
+						<td>$99.00</td>
+						<td>2</td>
+						<td>#BG6R9853LP</td>
+					</tr>
+					<tr>
+						<td><img src="img/products/prod2.jpg" alt="prod2"></td>
+						<td>Your Product Title Here</td> 
+						<td>3BH87G</td>
+						<td>Pending</td>
+						<td>08 Sep 2015</td>
+						<td>$99.00</td>
+						<td>2</td>
+						<td>#368QRM83B</td>
+					</tr>
+				</tbody>
 			</table>
 
 		</div>
